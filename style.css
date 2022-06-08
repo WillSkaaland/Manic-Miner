@@ -1,0 +1,57 @@
+
+
+body { 
+  background: black;
+  color: grey;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(100,100px);
+  grid-template-rows: repeat(100,100px);
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  transition: border 300ms;
+  overflow: hidden;
+}
+
+.dirtile {
+  width: 100px;
+  height: 100px;
+}
+
+.tile:hover {
+  border:3px solid yellow;
+}
+
+#info-trigger {
+  cursor: help;
+}
+
+#info {
+  pointer-events: none;
+  opacity: 0;
+  transition: all 1000ms;
+  transform: scale(0);
+  height: 0px;
+}
+
+#info.show {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+  height: 50px;
+}
